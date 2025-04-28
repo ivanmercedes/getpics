@@ -1,6 +1,6 @@
 {
   "name": "getpics",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easily download and save all images from any website with just one command.",
   "main": "./index.js",
   "bin": {
