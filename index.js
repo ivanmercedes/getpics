@@ -19,7 +19,7 @@ async function descargarImagenes() {
   const paginaUrl = getArgumentValue('url');
 
   if (!directorio || !paginaUrl) {
-    console.log("Uso correcto: npx getpics --url=\"https://sitio.com\" --dir=\"nombre_directorio\"");
+    console.log("Correct usage: npx getpics --url=\"https://site.com\" --dir=\"directory_name\"");
     process.exit(1);
   }
 
@@ -33,7 +33,7 @@ async function descargarImagenes() {
     const imagenes = Array.from(dom.window.document.querySelectorAll('img'));
 
     if (imagenes.length === 0) {
-      console.log("No se encontraron imágenes en la página.");
+      console.log("No images found on the page.");
       return;
     }
 
@@ -54,15 +54,15 @@ async function descargarImagenes() {
 
         const nombreArchivo = path.join(directorio, `${i + 1}${extension}`);
         fs.writeFileSync(nombreArchivo, respuesta.data);
-        console.log(`Imagen ${i + 1} descargada: ${nombreArchivo}`);
+        console.log(`Image ${i + 1} downloaded: ${nombreArchivo}`);
       } catch (error) {
-        console.log(`No se pudo descargar la imagen ${src}: ${error.message}`);
+        console.log(`Could not download image ${src}: ${error.message}`);
       }
     }
 
-    console.log("✅ Descarga finalizada.");
+    console.log("✅ Download completed.");
   } catch (error) {
-    console.error(`Error al acceder a la página: ${error.message}`);
+    console.error(`Error accessing the page: ${error.message}`);
   }
 }
 
