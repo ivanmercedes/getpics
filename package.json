@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Easily download and save all images from any website with just one command.",
   "main": "./index.js",
+  "bin": {
+    "getpics": "./index.js"
+  },
   "keywords": [
     "images",
     "image downloader",
@@ -17,9 +20,6 @@
     "save images",
     "scraping"
   ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Ivan Mercedes <ivanmercedes@gmail.com>",
   "license": "MIT",
   "dependencies": {
